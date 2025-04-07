@@ -13,7 +13,7 @@ Since each blade element has a unique shape, the Reynolds number (Re) varies sig
  2. Calculate the corresponding Re and twist angle for each element.
  3. Input these values into **XFoil.exe** (see ```XFoil_input/Readme_XFoil``` for details).
  4. **Ncrit** (transition criteria) – Refer to Table 1 for recommended fluid transition values.
-![Typical Ncrit values and their meanings](图片URL)
+![Typical Ncrit values and their meanings]([图片URL](https://github.com/EygonZhang/FX-BEMS/blob/main/figures/Ncrit%20reference%20table.png))
 For detailed instructions, see XFoil input/Readme_XFoil.
 
 ## 2. BEM Iteration for Rotation Correction
