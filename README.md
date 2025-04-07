@@ -29,7 +29,6 @@ The Prandtl tip loss function model yields a singularity solution at r = R (blad
 
 The overall results 
 ！[Force result comparison with Hassan w/o BEM correction!](https://github.com/user-attachments/assets/45ce3d64-b671-48f1-9596-fefec45e4287)
-]
 
 For commercial cooperation of the full version codes or technical support, contact: linda.howe@ntu.edu.sg and clang@ntu.edu.sg
 
