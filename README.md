@@ -33,8 +33,8 @@ The complete code includes Modules 3 to 5 for calculating:
  3. Updated CL and CD after blade rotational correction
  4. Tangential force (***F_tan***) and axial force (***F_axial***) results
 
-,which supports one-click CSV export functionality. Comparative results plotted against Hassan's study are shown below.
-！[Force result comparison with Hassan w/o BEM correction!](https://github.com/EygonZhang/FX-BEMS/blob/main/results/Example%20blade_results.png)
+,which supports one-click CSV export functionality. Comparative results plotted against Hassan's study are shown below:
+![Force result comparison with Hassan w/o BEM correction!](https://github.com/EygonZhang/FX-BEMS/blob/main/results/Example%20blade_results.png)
 
 Note that our blade design features (1) Linear twist distribution at the root section and (2) No blade thickening (unlike industrial blade designs in Hassan's reference model). This validation confirms that our code can also serve as a reference tool for geometric corrections in industrial blade design/manufacturing and an academic benchmark for BEM theory implementation.
 
