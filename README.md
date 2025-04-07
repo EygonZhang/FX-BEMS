@@ -14,6 +14,7 @@ Since each blade element has a unique shape, the Reynolds number (Re) varies sig
  3. Input these values into **XFoil.exe** (see ```XFoil_input/Readme_XFoil``` for details).
  4. **Ncrit** (transition criteria) – Refer to Table 1 for recommended fluid transition values.
 ![Typical Ncrit values and their meanings](https://raw.githubusercontent.com/EygonZhang/FX-BEMS/main/figures/Ncrit%20reference%20table.png)
+
 For detailed instructions, see XFoil input/Readme_XFoil.
 
 ## 2. BEM Iteration for Rotation Correction
@@ -26,6 +27,9 @@ This code takes the XFoil output (2D CL and CD for each blade element) from Sect
 The Prandtl tip loss function model yields a singularity solution at r = R (blade tip). In industrial applications, this result is often assumed to be between 0.25 and 0.5. However, this can lead to convergence issues. This section of the code independently calculates whether the engineer-specified F value produces a convergent result at the blade tip. If convergence fails, the induction factors may diverge (a → 1.000, a' → -1.000).
 **Note**: After running this section and selecting an appropriate F value, it is necessary to rerun the code from Section 2.
 
+The overall results 
+！[Force result comparison with Hassan w/o BEM correction!](https://github.com/user-attachments/assets/45ce3d64-b671-48f1-9596-fefec45e4287)
+]
 
 For commercial cooperation of the full version codes or technical support, contact: linda.howe@ntu.edu.sg and clang@ntu.edu.sg
 
