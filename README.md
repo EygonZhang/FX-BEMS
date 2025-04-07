@@ -1,6 +1,5 @@
-# FX-BEMS^©
+# FX-BEMS ©
 This patent describes a Python-based integrated system that utilizes an enhanced twist-blade BEM (Blade Element Momentum) algorithm coupled with XFoil to achieve refined modeling of blade forces. The design process involves: FX-BEMS_0. Dividing the blade into elements; FX-BEMS_1. Inputting XFoil parameters to obtain 2D airfoil data; FX-BEMS_2. Performing BEM iteration to calculate rotation correction; FX-BEMS_3. Setting the tip loss factor and conducting convergence checks
-
 # Quick Start
 ## 0. Blade Element Division
 This section of the code divides the blade into user-defined elements and outputs the geometric parameters for each element, including:
@@ -10,11 +9,10 @@ radius, chord length, and twist angle.
 Since each blade element has a unique shape, the Reynolds number (Re) varies significantly (up to ~2x) from the tip to the root. Additionally, the initial angle of attack (AoA) changes due to the twist design.
 
 **Steps for Engineers:**
-
  1. Refer to Section 0 for blade geometry parameters.
  2. Calculate the corresponding Re and twist angle for each element.
  3. Input these values into **XFoil.exe** (see ```XFoil_input/Readme_XFoil``` for details).
- 4. **Ncrit (transition criteria)** – Refer to Table 1 for recommended fluid transition values.
+ 4. **Ncrit** (transition criteria) – Refer to Table 1 for recommended fluid transition values.
 
 For detailed instructions, see XFoil input/Readme_XFoil.
 
