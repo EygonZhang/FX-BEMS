@@ -1,19 +1,19 @@
 # FX-BEMS
+This patent describes a Python-based integrated system that utilizes an enhanced twist-blade BEM (Blade Element Momentum) algorithm coupled with XFoil to achieve refined modeling of blade forces. The design process involves: FX-BEMS_0. Dividing the blade into elements; FX-BEMS_1. Inputting XFoil parameters to obtain 2D airfoil data; FX-BEMS_2. Performing BEM iteration to calculate rotation correction; FX-BEMS_3. Setting the tip loss factor and conducting convergence checks
 
-This patent is a Python-based integrated system by enhanced twist-blade BEM coupled XFoil algorithm, with customizable parameter modules to achieve refined modeling of blade forces. 涉及到的设计流程为0. 叶片划分element，1. XFoil参数输入得到2D叶形数据 2. BEM iteration to get the rotation correction 3. Tip loss factor 设置与收敛检查。
+# Quick Start
+##0. Blade Element Division
+This section of the code divides the blade into user-defined elements and outputs the geometric parameters for each element, including radius, chord length, and twist angle.
 
-# Quick start
-## 0.叶片划分element
-这部分代码用于根据用户设计的叶片单元数，输出每个叶片所在位置的几何参数，包括radius，chord，twist angle。
+##1. XFoil Parameter Input for 2D Airfoil Data
+Since the shape of each blade element varies, the Reynolds number (Re) increases significantly (approximately twofold) from the blade tip to the root. Additionally, the initial angle of attack changes due to the twist design. Before use, engineers must refer to the blade geometric parameters from Section 0 to calculate the corresponding Re and twist angle, which serve as input parameters for XFoil.exe. The prompt file also supports the selection of the Ncrit transition number. Refer to Table 1 for recommended fluid transition numbers.
 
-## 1. XFoil参数输入得到2D叶形数据 
-由于不同叶素单元的形状不同，其雷诺数从叶尖到叶根将显著增大约两倍，另外叶片的初始攻角也因为twist的设计而改变。工程师在使用前，需要参考Section.0的叶片几何参数，计算对应的Re和扭转角，作为XFoil.exe的输入参数。prompt文件还支持Ncrit 转隶数的选择，参考的流体转隶数如下表-1.
-详细使用说明见XFoil input/Readme_XFoil。
+For detailed instructions, see XFoil input/Readme_XFoil.
 
-## 2. BEM iteration to get the rotation correction
-根据Section.1的XFoil output，得到每个叶素的2Dimension CL and CD结果，作为该部分代码的输入
+##2. BEM Iteration for Rotation Correction
+Using the XFoil output from Section 1, this section of the code takes the 2D CL (lift coefficient) and CD (drag coefficient) results for each blade element as input to perform BEM iteration.
 
-## 3. Tip loss factor 设置与收敛检查。
-由于Prandtle叶尖损失函数模型在r=R时得到singularity解，工业上通常假设该结果为0.25-0.5之间的数值，但会遇到迭代无法收敛的问题，这部分代码单独计算工程师给定F值对叶尖结果是否收敛的输出，若不收敛，a→1.000，a'趋近于→-1.000。
+##3. Tip Loss Factor Setting and Convergence Check
+The Prandtl tip loss function model yields a singularity solution at r = R (blade tip). In industrial applications, this result is often assumed to be a value between 0.25 and 0.5. However, this can lead to convergence issues. This section of the code independently calculates whether the engineer-specified F value produces a convergent result at the blade tip. If convergence fails, the induction factors may diverge (a → 1.000, a' → -1.000).
 
-注意在运行完这段代码选择好合适的F value后需要重新运行第二部分代码。
+##Note##: After running this section and selecting an appropriate F value, it is necessary to rerun the code from Section 2.
