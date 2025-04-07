@@ -1,0 +1,19 @@
+# FX-BEMS
+
+This patent is a Python-based integrated system by enhanced twist-blade BEM coupled XFoil algorithm, with customizable parameter modules to achieve refined modeling of blade forces. 涉及到的设计流程为0. 叶片划分element，1. XFoil参数输入得到2D叶形数据 2. BEM iteration to get the rotation correction 3. Tip loss factor 设置与收敛检查。
+
+# Quick start
+## 0.叶片划分element
+这部分代码用于根据用户设计的叶片单元数，输出每个叶片所在位置的几何参数，包括radius，chord，twist angle。
+
+## 1. XFoil参数输入得到2D叶形数据 
+由于不同叶素单元的形状不同，其雷诺数从叶尖到叶根将显著增大约两倍，另外叶片的初始攻角也因为twist的设计而改变。工程师在使用前，需要参考Section.0的叶片几何参数，计算对应的Re和扭转角，作为XFoil.exe的输入参数。prompt文件还支持Ncrit 转隶数的选择，参考的流体转隶数如下表-1.
+详细使用说明见XFoil input/Readme_XFoil。
+
+## 2. BEM iteration to get the rotation correction
+根据Section.1的XFoil output，得到每个叶素的2Dimension CL and CD结果，作为该部分代码的输入
+
+## 3. Tip loss factor 设置与收敛检查。
+由于Prandtle叶尖损失函数模型在r=R时得到singularity解，工业上通常假设该结果为0.25-0.5之间的数值，但会遇到迭代无法收敛的问题，这部分代码单独计算工程师给定F值对叶尖结果是否收敛的输出，若不收敛，a→1.000，a'趋近于→-1.000。
+
+注意在运行完这段代码选择好合适的F value后需要重新运行第二部分代码。
