@@ -1,5 +1,5 @@
 # FX-BEMS ©
-This patented code was created by researchers Yixiao Zhang and Eddie Yin Kwee Ng from Nanyang Technological University (NTU), Singapore. It describes a Python-based integrated system that utilizes an enhanced twist-blade BEM (Blade Element Momentum) algorithm coupled with XFoil to achieve refined modeling of blade forces. The design process involves: FX-BEMS_0. Dividing the blade into elements; FX-BEMS_1. Inputting XFoil parameters to obtain 2D airfoil data; FX-BEMS_2. Performing BEM iteration to calculate rotation correction; FX-BEMS_3. Setting the tip loss factor and conducting convergence checks
+This patented code was created by researchers Yixiao Zhang and Eddie Yin Kwee Ng from Nanyang Technological University (NTU), Singapore. This public code is the Education Version It describes a Python-based integrated system that utilizes an enhanced twist-blade BEM (Blade Element Momentum) algorithm coupled with XFoil to achieve refined modeling of blade forces. The design process involves: FX-BEMS_0. Dividing the blade into elements; FX-BEMS_1. Inputting XFoil parameters to obtain 2D airfoil data; FX-BEMS_2. Performing BEM iteration to calculate rotation correction; FX-BEMS_3. Setting the tip loss factor and conducting convergence checks
 # Quick Start
 ## 0. Blade Element Division
 This section of the code divides the blade into user-defined elements and outputs the geometric parameters for each element, including:
@@ -27,7 +27,7 @@ This code takes the XFoil output (2D CL and CD for each blade element) from Modu
 The Prandtl tip loss function model yields a singularity solution at r = R (blade tip). In industrial applications, this result is often assumed to be between 0.25 and 0.5. However, this can lead to convergence issues. This section of the code independently calculates whether the engineer-specified F value produces a convergent result at the blade tip. If convergence fails, the induction factors may diverge (a → 1.000, a' → -1.000).
 **Note**: After running this section and selecting an appropriate F value, it is necessary to rerun the code from Section 2.
 
-The complete code includes Modules 3 to 5 for calculating: 
+The complete code includes Part 4 to 6 for calculating: 
  1. Relative velocity (***Urel***)
  2. Flow angle (***φ***)
  3. Updated CL and CD after blade rotational correction
