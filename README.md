@@ -1,5 +1,8 @@
 # FX-BEMS ©
-This patented code was created by researchers Yixiao Zhang and Eddie Yin Kwee Ng from Nanyang Technological University (NTU), Singapore. This public code is the Education Version It describes a Python-based integrated system that utilizes an enhanced twist-blade BEM (Blade Element Momentum) algorithm coupled with XFoil to achieve refined modeling of blade forces. The design process involves: FX-BEMS_0. Dividing the blade into elements; FX-BEMS_1. Inputting XFoil parameters to obtain 2D airfoil data; FX-BEMS_2. Performing BEM iteration to calculate rotation correction; FX-BEMS_3. Setting the tip loss factor and conducting convergence checks
+This patented code was created by researchers Yixiao Zhang and Eddie Yin Kwee Ng from Nanyang Technological University (NTU), Singapore. It describes a Python-based integrated system that utilizes an enhanced twist-blade BEM (Blade Element Momentum) algorithm coupled with XFoil to achieve refined modeling of blade forces. The portion of the code includes the following design process moduels: FX-BEMS_0. Dividing the blade into elements; FX-BEMS_1. Inputting XFoil parameters to obtain 2D airfoil data; FX-BEMS_2. Performing BEM iteration to calculate rotation correction; FX-BEMS_3. Setting the tip loss factor and conducting convergence checks; FX-BEMS_4. Relative Velocity & Flow Angle Calculation; FX-BEMS_5. Blade-Rotation-Corrected CL/CD Update; FX-BEMS_6. Tangential/Axial Force Computation (with rotational-corrected CL/CD).
+
+This code comprises the FX-BEMS_0~3 modules only to get the induction factors a and a' under BEM iteration. released as an Educational Version under open-source license for non-commercial use. 
+
 # Quick Start
 ## 0. Blade Element Division
 This section of the code divides the blade into user-defined elements and outputs the geometric parameters for each element, including:
