@@ -5,15 +5,15 @@ This patented code was created by researchers Yixiao Zhang and Eddie Yin Kwee Ng
 
 **FX-BEMS_1**. Inputting XFoil parameters to obtain 2D airfoil data; 
 
-**FX-BEMS_2**. Performing BEM iteration to calculate rotation correction; 
+**FX-BEMS_2**. Performing BEM iteration to calculate induction factor a and a'; 
 
 **FX-BEMS_3**. Setting the tip loss factor and conducting convergence checks; 
 
-**FX-BEMS_4**. Relative Velocity & Flow Angle Calculation; 
+**FX-BEMS_4**. Relative Velocity & Flow Angle Calculation (Private); 
 
-**FX-BEMS_5**. Blade-Rotation-Corrected CL/CD Update; 
+**FX-BEMS_5**. Blade-Rotation-Corrected CL/CD Update (Private); 
 
-**FX-BEMS_6**. Tangential/Axial Force Computation (with rotational-corrected CL/CD).
+**FX-BEMS_6**. Tangential/Axial Force Computation (with rotational-corrected CL/CD) (Private).
 
 This code contains the FX-BEMS_0-FX-BEMS_3 modules only to get the induction factors a and a' under BEM iteration, released as an Educational Version under open-source license for any non-commercial use. For commercial cooperation of the full version codes or technical support, contact: linda.howe@ntu.edu.sg and clang@ntu.edu.sg
 
