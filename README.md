@@ -13,7 +13,7 @@ Since each blade element has a unique shape, the Reynolds number (Re) varies sig
  2. Calculate the corresponding Re and twist angle for each element.
  3. Input these values into **XFoil.exe** (see ```XFoil_input/Readme_XFoil``` for details).
  4. **Ncrit** (transition criteria) – Refer to Table 1 for recommended fluid transition values.
-
+![Typical Ncrit values and their meanings](图片URL)
 For detailed instructions, see XFoil input/Readme_XFoil.
 
 ## 2. BEM Iteration for Rotation Correction
@@ -23,14 +23,14 @@ This code takes the XFoil output (2D CL and CD for each blade element) from Sect
  2. Tangential induction factor (**a'**)
 
 ## 3. Tip Loss Factor Setting and Convergence Check
-The Prandtl tip loss function model yields a singularity solution at r = R (blade tip). In industrial applications, this result is often assumed to be a value between 0.25 and 0.5. However, this can lead to convergence issues. This section of the code independently calculates whether the engineer-specified F value produces a convergent result at the blade tip. If convergence fails, the induction factors may diverge (a → 1.000, a' → -1.000).
-
+The Prandtl tip loss function model yields a singularity solution at r = R (blade tip). In industrial applications, this result is often assumed to be between 0.25 and 0.5. However, this can lead to convergence issues. This section of the code independently calculates whether the engineer-specified F value produces a convergent result at the blade tip. If convergence fails, the induction factors may diverge (a → 1.000, a' → -1.000).
 **Note**: After running this section and selecting an appropriate F value, it is necessary to rerun the code from Section 2.
 
 
-For commercial cooperation of the full version codes or technical support, contact: industry@yourcompany.com
+For commercial cooperation of the full version codes or technical support, contact: linda.howe@ntu.edu.sg and clang@ntu.edu.sg
 
 **License**: Custom academic use (patent pending). Commercial applications require a license.
 
-**Citation**: If used in research, cite:
+**Citation**: If used in research, kindly cite it as:
+
 [1] Y. Zhang and N. Eddie Yin Kwee, “Fast XFoil-integrated Blade Element Momentum Solver (FX-BEMS)” Apr. 07, 2025 Accessed: Jun. 27, 2025. [Online]. Available: https://github.com/EygonZhang/FX-BEMS (Patent Pending).  
