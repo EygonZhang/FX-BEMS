@@ -33,4 +33,4 @@ For commercial cooperation of the full version codes or technical support, conta
 **License**: Custom academic use (patent pending). Commercial applications require a license.
 
 **Citation**: If used in research, cite:
-Zhang, Y. & Ng, E.Y.K. (2023). FX-BEMS Solver. NTU Singapore. Patent Pending.  
+[1] Y. Zhang and N. Eddie Yin Kwee, “Fast XFoil-integrated Blade Element Momentum Solver (FX-BEMS)” Apr. 07, 2025 Accessed: Jun. 27, 2025. [Online]. Available: https://github.com/EygonZhang/FX-BEMS (Patent Pending).  
