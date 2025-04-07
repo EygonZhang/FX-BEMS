@@ -6,7 +6,7 @@ This section of the code divides the blade into user-defined elements and output
 radius, chord length, and twist angle.
  
 ## 1. XFoil Parameter Input for 2D Airfoil Data
-Since each blade element has a unique shape, the Reynolds number (Re) varies significantly (up to ~2x) from the tip to the root. Additionally, the initial angle of attack (AoA) changes due to the twist design.
+Since each blade element has a unique shape, the Reynolds number (***Re***) varies significantly (up to ~2x) from the tip to the root. Additionally, the initial angle of attack (***AoA***) changes due to the twist design.
 
 **Steps for Engineers:**
  1. Refer to Section 0 for blade geometry parameters.
@@ -32,9 +32,9 @@ The complete code includes Modules 3 to 5 for calculating:
  2. Flow angle (***φ***)
  3. Updated CL and CD after blade rotational correction
  4. Tangential force (***F_tan***) and axial force (***F_axial***) results
- 5. 
+
 ,which supports one-click CSV export functionality. Comparative results plotted against Hassan's study are shown below.
-！[Force result comparison with Hassan w/o BEM correction!]([https://github.com/user-attachments/assets/45ce3d64-b671-48f1-9596-fefec45e4287](https://github.com/EygonZhang/FX-BEMS/blob/main/results/Example%20blade_results.png))
+！[Force result comparison with Hassan w/o BEM correction!](https://github.com/EygonZhang/FX-BEMS/blob/main/results/Example%20blade_results.png)
 
 Note that our blade design features (1) Linear twist distribution at the root section and (2) No blade thickening (unlike industrial blade designs in Hassan's reference model). This validation confirms that our code can also serve as a reference tool for geometric corrections in industrial blade design/manufacturing and an academic benchmark for BEM theory implementation.
 
