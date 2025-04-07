@@ -31,5 +31,6 @@ The Prandtl tip loss function model yields a singularity solution at r = R (blad
 For commercial cooperation of the full version codes or technical support, contact: industry@yourcompany.com
 
 **License**: Custom academic use (patent pending). Commercial applications require a license.
+
 **Citation**: If used in research, cite:
 Zhang, Y. & Ng, E.Y.K. (2023). FX-BEMS Solver. NTU Singapore. Patent Pending.  
