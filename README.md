@@ -21,12 +21,12 @@ This code contains the FX-BEMS_0-FX-BEMS_3 modules only to get the induction fac
 
 [1] Zhang, Yixiao, and Ng Eddie Yin Kwee. 2025. Fast XFoil-integrated Blade Element Momentum Solver Abbreviation: FX-BEMS. NTUitive, the Innovation and Enterprise (I&E) Company of Nanyang Technological University, Singapore (NTU Singapore), issued April 7, 2025. https://github.com/EygonZhang/FX-BEMS.git (Patent Pending).  
 
-# Quick Start
-## 0. Blade Element Division
+## Quick Start
+### 0. Blade Element Division
 This section of the code divides the blade into user-defined elements and outputs the geometric parameters for each element, including:
 radius, chord length, and twist angle.
  
-## 1. XFoil Parameter Input for 2D Airfoil Data
+### 1. XFoil Parameter Input for 2D Airfoil Data
 Since each blade element has a unique shape, the Reynolds number (***Re***) varies significantly (up to ~2x) from the tip to the root. Additionally, the initial angle of attack (***AoA***) changes due to the twist design.
 
 **Steps for Engineers:**
@@ -38,13 +38,13 @@ Since each blade element has a unique shape, the Reynolds number (***Re***) vari
 
 For detailed instructions, see XFoil input/Readme_XFoil.
 
-## 2. BEM Iteration for Rotation Correction
+### 2. BEM Iteration for Rotation Correction
 This code takes the XFoil output (2D CL and CD for each blade element) from Module 1 as input and performs BEM iteration to compute:
 
  1. Axial induction factor (***a***)
  2. Tangential induction factor (***a'***)
 
-## 3. Tip Loss Factor Setting and Convergence Check
+### 3. Tip Loss Factor Setting and Convergence Check
 The Prandtl tip loss function model yields a singularity solution at r = R (blade tip). In industrial applications, this result is often assumed to be between 0.25 and 0.5. However, this can lead to convergence issues. This section of the code independently calculates whether the engineer-specified F value produces a convergent result at the blade tip. If convergence fails, the induction factors may diverge (a → 1.000, a' → -1.000).
 **Note**: After running this section and selecting an appropriate F value, it is necessary to rerun the code from Section 2.
 
