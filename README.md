@@ -1,7 +1,25 @@
 # FX-BEMS ©
-This patented code was created by researchers Yixiao Zhang and Eddie Yin Kwee Ng from Nanyang Technological University (NTU), Singapore. It describes a Python-based integrated system that utilizes an enhanced twist-blade BEM (Blade Element Momentum) algorithm coupled with XFoil to achieve refined modeling of blade forces. The portion of the code includes the following design process moduels: FX-BEMS_0. Dividing the blade into elements; FX-BEMS_1. Inputting XFoil parameters to obtain 2D airfoil data; FX-BEMS_2. Performing BEM iteration to calculate rotation correction; FX-BEMS_3. Setting the tip loss factor and conducting convergence checks; FX-BEMS_4. Relative Velocity & Flow Angle Calculation; FX-BEMS_5. Blade-Rotation-Corrected CL/CD Update; FX-BEMS_6. Tangential/Axial Force Computation (with rotational-corrected CL/CD).
+This patented code was created by researchers Yixiao Zhang and Eddie Yin Kwee Ng from Nanyang Technological University (NTU), Singapore. It describes a Python-based integrated system that utilizes an enhanced twist-blade BEM (Blade Element Momentum) algorithm coupled with XFoil to achieve refined modeling of blade forces. The portion of the code includes the following design process modules: 
 
-This code comprises the FX-BEMS_0~3 modules only to get the induction factors a and a' under BEM iteration. released as an Educational Version under open-source license for non-commercial use. 
+**FX-BEMS_0**. Dividing the blade into elements;
+
+**FX-BEMS_1**. Inputting XFoil parameters to obtain 2D airfoil data; 
+
+**FX-BEMS_2**. Performing BEM iteration to calculate rotation correction; 
+
+**FX-BEMS_3**. Setting the tip loss factor and conducting convergence checks; 
+
+**FX-BEMS_4**. Relative Velocity & Flow Angle Calculation; 
+
+**FX-BEMS_5**. Blade-Rotation-Corrected CL/CD Update; 
+
+**FX-BEMS_6**. Tangential/Axial Force Computation (with rotational-corrected CL/CD).
+
+This code contains the FX-BEMS_0-FX-BEMS_3 modules only to get the induction factors a and a' under BEM iteration, released as an Educational Version under open-source license for any non-commercial use. For commercial cooperation of the full version codes or technical support, contact: linda.howe@ntu.edu.sg and clang@ntu.edu.sg
+
+**Citation**: If used in research, kindly cite it as:
+
+[1] Zhang, Yixiao, and Ng Eddie Yin Kwee. 2025. Fast XFoil-integrated Blade Element Momentum Solver Abbreviation: FX-BEMS. NTUitive, the Innovation and Enterprise (I&E) Company of Nanyang Technological University, Singapore (NTU Singapore), issued April 7, 2025. https://github.com/EygonZhang/FX-BEMS.git (Patent Pending).  
 
 # Quick Start
 ## 0. Blade Element Division
@@ -43,10 +61,4 @@ Note that our blade design features (1) Linear twist distribution at the root se
 
 
 
-For commercial cooperation of the full version codes or technical support, contact: linda.howe@ntu.edu.sg and clang@ntu.edu.sg
 
-**License**: Custom academic use (patent pending). Commercial applications require a license.
-
-**Citation**: If used in research, kindly cite it as:
-
-[1] Zhang, Yixiao, and Ng Eddie Yin Kwee. 2025. Fast XFoil-integrated Blade Element Momentum Solver Abbreviation: FX-BEMS. NTUitive, the Innovation and Enterprise (I&E) Company of Nanyang Technological University, Singapore (NTU Singapore), issued April 7, 2025. https://github.com/EygonZhang/FX-BEMS.git (Patent Pending).  
