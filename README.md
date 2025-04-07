@@ -1,5 +1,5 @@
 # FX-BEMS ©
-This patent describes a Python-based integrated system that utilizes an enhanced twist-blade BEM (Blade Element Momentum) algorithm coupled with XFoil to achieve refined modeling of blade forces. The design process involves: FX-BEMS_0. Dividing the blade into elements; FX-BEMS_1. Inputting XFoil parameters to obtain 2D airfoil data; FX-BEMS_2. Performing BEM iteration to calculate rotation correction; FX-BEMS_3. Setting the tip loss factor and conducting convergence checks
+This patented code was created by researchers Yixiao Zhang and Eddie Yin Kwee Ng from Nanyang Technological University (NTU), Singapore. It describes a Python-based integrated system that utilizes an enhanced twist-blade BEM (Blade Element Momentum) algorithm coupled with XFoil to achieve refined modeling of blade forces. The design process involves: FX-BEMS_0. Dividing the blade into elements; FX-BEMS_1. Inputting XFoil parameters to obtain 2D airfoil data; FX-BEMS_2. Performing BEM iteration to calculate rotation correction; FX-BEMS_3. Setting the tip loss factor and conducting convergence checks
 # Quick Start
 ## 0. Blade Element Division
 This section of the code divides the blade into user-defined elements and outputs the geometric parameters for each element, including:
@@ -46,4 +46,4 @@ For commercial cooperation of the full version codes or technical support, conta
 
 **Citation**: If used in research, kindly cite it as:
 
-[1] Y. Zhang and N. Eddie Yin Kwee, “Fast XFoil-integrated Blade Element Momentum Solver (FX-BEMS)” Apr. 07, 2025 Accessed: Jun. 27, 2025. [Online]. Available: https://github.com/EygonZhang/FX-BEMS (Patent Pending).  
+[1] Zhang, Yixiao, and Ng Eddie Yin Kwee. 2025. Fast XFoil-integrated Blade Element Momentum Solver Abbreviation: FX-BEMS. NTUitive, the Innovation and Enterprise (I&E) Company of Nanyang Technological University, Singapore (NTU Singapore), issued April 7, 2025. https://github.com/EygonZhang/FX-BEMS.git (Patent Pending).  
