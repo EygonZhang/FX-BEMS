@@ -1,0 +1,126 @@
+# FX-BEMS^©
+FX-BEMS^© is 
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{listings}
+
+\title{Rapid BEM Force Solver Cored by XFoil Algorithm}
+\author{Yixiao Zhang, Eddie Yin Kwee Ng}
+\date{School of Mechanical and Aerospace Engineering\\ Nanyang Technological University, Singapore}
+
+\begin{document}
+
+\maketitle
+
+\section*{Copyright Notice}
+\textcolor{red}{\textbf{Patent Pending} • For Academic Use Only • Commercial Licensing Required}
+
+\section{Overview}
+This repository hosts the \textbf{Educational Version} of the Rapid BEM Force Solver, integrating MIT's XFoil algorithm with Blade Element Momentum (BEM) theory for high-precision aerodynamic analysis of rotating blades. Key features:
+
+\begin{itemize}
+    \item \textbf{Dynamic Coupling}: Real-time XFoil-BEM closed-loop iteration
+    \item \textbf{Twist Optimization}: Segment-specific twist angle ($\theta$) adjustment
+    \item \textbf{Adaptive Correction}: Auto-adjusts $Re$ and $N_{crit}$ based on local flow conditions
+    \item \textbf{Cloud-Ready}: Runs on Google Colab with 1-click CSV output
+\end{itemize}
+
+\section{Technical Gap Addressed}
+Traditional BEM tools lack:
+\begin{itemize}
+    \item Automated 2D-to-3D data conversion
+    \item Dynamic $Re$-$N_{crit}$ coupling
+    \item Multi-segment twist angle optimization
+\end{itemize}
+
+Our solution reduces computational errors from 15\% to \textless5\% while being 10-100x faster than CFD.
+
+\section{Core Algorithm}
+\subsection{Physical Model}
+\begin{equation}
+    T = \dot{m} \cdot \Delta U \quad \text{(Eq.1)}
+\end{equation}
+
+\begin{equation}
+    U_1 = (1-a)U_\infty \quad \text{(Eq.15)}
+\end{equation}
+
+\subsection{BEM-XFoil Integration}
+\begin{enumerate}
+    \item Divide blade into elements with independent $\theta$
+    \item Compute $a$ and $a'$ via BEM theory
+    \item Call XFoil for $C_L/C_D$ with dynamic $Re$-$N_{crit}$
+    \item Converge using momentum-blade equilibrium
+\end{enumerate}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{figures/iteration_flowchart.png}
+    \caption{BEM-XFoil iterative algorithm (Patent Figure 6)}
+\end{figure}
+
+\section{Educational Version Features}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Scope} & Parts 1 \& 2 (Induction factors $a$ and $a'$) \\
+\hline
+\textbf{Limitation} & Excludes 90° blade rotation "Key" for commercial designs \\
+\hline
+\textbf{Duration} & 1-week trial (sufficient for fundamental analysis) \\
+\hline
+\textbf{Output} & CSV with $C_L$, $C_D$, $F_{tan}$, $F_{axial}$ distributions \\
+\hline
+\end{tabular}
+
+\section*{Example Output}
+\begin{lstlisting}[language=Python]
+# Sample output structure
+Radius (m) | a (corrected) | a' (corrected) | F_tiploss | U_rel (m/s)
+-----------|---------------|----------------|-----------|------------
+0.16       | 0.2145        | 0.0032         | 0.92      | 12.34
+0.22       | 0.1987        | 0.0028         | 0.95      | 13.56
+...        | ...           | ...            | ...       | ...
+\end{lstlisting}
+
+\section{Commercial Applications}
+\textbf{Full Version} includes:
+\begin{itemize}
+    \item Complete $F_{tan}$/$F_{axial}$ calculation
+    \item Blade rotation "Key" for real turbine design
+    \item Licensing controls and industrial support
+\end{itemize}
+
+\textbf{Target Industries:}
+\begin{itemize}
+    \item Wind turbine blade optimization
+    \item Drone propeller design
+    \item Tidal energy systems
+\end{itemize}
+
+\section*{Get the Commercial Version}
+For industrial licensing or training:
+\begin{itemize}
+    \item \textbf{Email}: industry@yourcompany.com
+    \item \textbf{Citation Requirement}: Academic users must reference:
+    \begin{verbatim}
+    Zhang, Y. & Ng, E.Y.K. (2023). Rapid BEM-XFoil Solver. 
+    NTU Singapore. Patent Pending.
+    \end{verbatim}
+\end{itemize}
+
+\section*{Repository Structure}
+\begin{verbatim}
+BEM-XFoil-Solver/
+├── code/               # Colab/Python scripts
+├── data/               # Sample airfoil coordinates
+├── docs/               # Theory documentation
+├── outputs/            # Example CSV results
+├── LICENSE             # Custom academic license
+└── requirements.txt    # Python dependencies
+\end{verbatim}
+
+\end{document}
