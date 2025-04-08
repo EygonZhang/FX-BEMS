@@ -59,10 +59,10 @@ For industrial applications, this result is often assumed to be between 0.25 and
 **Note**: After running this section and confirming an appropriate $F$ value, it is necessary to rerun the code from Module 2 to refresh the computation.
 
 The complete code includes Modules 4 to 6 for calculating: 
- 1. Relative velocity (***Urel***)
- 2. Flow angle (***φ***)
- 3. Updated **$C_L$** and **$C_D$** after blade rotational correction
- 4. Tangential force (***F_tan***) and axial force (***F_axial***) results
+ 1. Relative velocity ($U_{rel}$)
+ 2. Flow angle ($φ$)
+ 3. Updated **${C_L}'$** and **${C_D}'$** after blade rotational correction
+ 4. Tangential force ($F_{tangential}$) and axial force ($F_{axial}$) results
 
 ,which supports one-click CSV export functionality. Comparative results plotted against Hassan's study are shown below:
 ![Force result comparison with Hassan w/o BEM correction!](https://github.com/EygonZhang/FX-BEMS/blob/main/results/Example%20blade_results.png)
