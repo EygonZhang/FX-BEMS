@@ -6,7 +6,7 @@ This code was developed by researchers **Yixiao Zhang** and **Eddie Yin Kwee Ng*
 The current **Educational Version** includes the following modules:
 | Module | Functionality |
 |--------|--------------|
-| `FX-BEMS_0` | Blade discretization |
+| `FX-BEMS_0` | Blade element discretization |
 | `FX-BEMS_1` | XFoil parameters input & 2D airfoil data generation |
 | `FX-BEMS_2` | BEM iterative computation of induction factors (***a*** and ***a'***) |
 | `FX-BEMS_3` | Tip loss factor inclusion and convergence checking |
@@ -51,8 +51,12 @@ This code takes the XFoil output (2D CL and CD for each blade element) from Modu
  2. Tangential induction factor (***a'***)
 
 ### 3. Tip Loss Factor Setting and Convergence Check
-The Prandtl tip loss function model yields a singularity solution at r = R (blade tip). In industrial applications, this result is often assumed to be between 0.25 and 0.5. However, this can lead to convergence issues. This section of the code independently calculates whether the engineer-specified F value produces a convergent result at the blade tip. If convergence fails, the induction factors may diverge (a → 1.000, a' → -1.000).
-**Note**: After running this section and selecting an appropriate F value, it is necessary to rerun the code from Section 2.
+The Prandtl tip loss function model yields a singularity solution at $r = R$ (blade tip), shown as: 
+
+$F=\frac{2}{\pi}cos^{-1}\left(e^{-f}\right); where\ f=\frac{B}{2}\cdot\frac{\left(R-r\right)}{rsin\phi}$
+
+For industrial applications, this result is often assumed to be between 0.25 and 0.5. However, this can lead to convergence issues. This section of the code independently calculates whether the engineer-specified $F$ value produces a convergent result at the blade tip. If convergence fails, the induction factors may diverge ($a$ → 1.000, $a'$ → -1.000). 
+**Note**: After running this section and confirming an appropriate $F$ value, it is necessary to rerun the code from Module 2 to refresh the computation.
 
 The complete code includes Modules 4 to 6 for calculating: 
  1. Relative velocity (***Urel***)
