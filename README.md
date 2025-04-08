@@ -37,7 +37,7 @@ Since each blade element has a unique shape, the Reynolds number (***Re***) vari
 
 **Steps for Engineers:**
  1. Refer to Section 0 for blade geometry parameters.
- 2. Calculate the corresponding ***Re*** and twist angle ***φ*** for each element.
+ 2. Calculate the corresponding ***Re*** and twist angle ***θ*** for each element.
  3. Input these values into **XFoil.exe** (see ```XFoil_input/Readme_XFoil``` for details).
  4. **$N_{crit}$** (transition criteria) – Refer to Table 1 for recommended fluid transition values.
 ![Typical Ncrit values and their meanings](https://raw.githubusercontent.com/EygonZhang/FX-BEMS/main/figures/Ncrit%20reference%20table.png)
