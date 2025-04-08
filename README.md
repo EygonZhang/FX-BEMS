@@ -62,7 +62,7 @@ The complete code includes Modules 4 to 6 for calculating:
  1. Relative velocity ($U_{rel}$)
  2. Flow angle ($φ$)
  3. Updated **${C_L}'$** and **${C_D}'$** after blade rotational correction
- 4. Tangential force ($F_{tangential}$) and axial force ($F_{axial}$) results
+ 4. Tangential force ($F_{t}$) and axial force ($F_{a}$) results
 
 ,which supports one-click CSV export functionality. Comparative results plotted against Hassan's study are shown below:
 ![Force result comparison with Hassan w/o BEM correction!](https://github.com/EygonZhang/FX-BEMS/blob/main/results/Example%20blade_results.png)
