@@ -1,25 +1,31 @@
-# Fast XFoil-embedded - Blade Element Momentum Solver (FX-BEMS) ©
-This licensed code was created by researchers Yixiao Zhang and Eddie Yin Kwee Ng from Nanyang Technological University (NTU), Singapore. It describes a Python-based integrated system that utilizes an enhanced twist-blade BEM (Blade Element Momentum) algorithm coupled with XFoil to achieve refined modeling of blade forces. The portion of the code includes the following design process modules: 
+# Fast XFoil-embedded - Blade Element Momentum Solver (FX-BEMS©)
 
-**FX-BEMS_0**. Dividing the blade into elements;
+### Intellectual Property Notice
+This code was developed by researchers **Yixiao Zhang** and **Eddie Yin Kwee Ng** at **Nanyang Technological University (NTU), Singapore**, and is the intellectual property of NTU. Licensing and commercialization are managed by **NTUitive Pte Ltd**, a wholly owned subsidiary of NTU responsible for the protection and licensing of the university's intellectual property. It forms part of a Python-based integrated system that utilizes an enhanced twist-blade Blade Element Momentum (BEM) algorithm coupled with XFoil to enable refined aerodynamic modeling of blade forces.
 
-**FX-BEMS_1**. Inputting XFoil parameters to obtain 2D airfoil data; 
+The current **Educational Version** includes the following modules:
+| Module | Functionality |
+|--------|--------------|
+| `FX-BEMS_0` | Blade discretization |
+| `FX-BEMS_1` | XFoil parameters input & 2D airfoil data generation |
+| `FX-BEMS_2` | BEM iterative computation of induction factors (***a*** and ***a'***) |
+| `FX-BEMS_3` | Tip loss factor inclusion and convergence checking |
 
-**FX-BEMS_2**. Performing BEM iteration to calculate induction factor a and a'; 
+> **Proprietary Modules Not Included**:  
+> `FX-BEMS_4` to `FX-BEMS_6` (flow angle $φ$ calculation, blade-rotation-corrected $C_L$ and $C_D$, tangential and axial force: $F_t$, $F_a$ computations)
 
-**FX-BEMS_3**. Setting the tip loss factor and conducting convergence checks; 
+This educational version is released under the **NTUitive Dual License Agreement** and is made available strictly for **non-commercial use**, such as academic research, education, or personal learning. **Commercial use, redistribution, or derivative development for commercial purposes** is not permitted without prior written permission from NTU via NTUitive.
 
-**FX-BEMS_4**. Relative Velocity & Flow Angle Calculation (Private); 
+To inquire about commercial licensing or technical support, please contact:
 
-**FX-BEMS_5**. Blade-Rotation-Corrected CL/CD Update (Private); 
+📧 [yixiao002@e.ntu.edu.sg](mailto:yixiao002@e.ntu.edu.sg) (technical support) | 📧 [linda.howe@ntu.edu.sg](mailto:linda.howe@ntu.edu.sg) (commercial licensing)
 
-**FX-BEMS_6**. Tangential/Axial Force Computation (with rotational-corrected CL/CD) (Private).
+**Copyright © 2025 Nanyang Technological University (NTU). All rights reserved. Licensing managed by NTUitive Pte Ltd.**
 
-This code contains the FX-BEMS_0-FX-BEMS_3 modules only to get the induction factors a and a' under BEM iteration, released as an Educational Version under open-source license for any non-commercial use. For commercial cooperation of the full version codes or technical support, contact: linda.howe@ntu.edu.sg and clang@ntu.edu.sg
+## Citation
+If this code is used in academic work or publications, please cite as:
 
-**Citation**: If used in research, kindly cite it as:
-
-[1] Zhang, Yixiao, and Ng Eddie Yin Kwee. 2025. Fast XFoil-integrated Blade Element Momentum Solver (FX-BEMS). NTUitive, the Innovation and Enterprise (I&E) Company of Nanyang Technological University, Singapore (NTU Singapore), issued April 7, 2025. https://github.com/EygonZhang/FX-BEMS.git (Copyright Pending).  
+Zhang, Yixiao, and Ng, Eddie Yin Kwee. 2025. Fast XFoil-integrated Blade Element Momentum Solver (FX-BEMS). Nanyang Technological University (NTU), Singapore. Licensing managed by NTUitive. Issued April 7, 2025. Available at: https://github.com/EygonZhang/FX-BEMS.git
 
 ## Quick Start
 ### 0. Blade Element Division
@@ -31,14 +37,14 @@ Since each blade element has a unique shape, the Reynolds number (***Re***) vari
 
 **Steps for Engineers:**
  1. Refer to Section 0 for blade geometry parameters.
- 2. Calculate the corresponding Re and twist angle for each element.
+ 2. Calculate the corresponding ***Re*** and twist angle ***φ*** for each element.
  3. Input these values into **XFoil.exe** (see ```XFoil_input/Readme_XFoil``` for details).
- 4. ***Ncrit*** (transition criteria) – Refer to Table 1 for recommended fluid transition values.
+ 4. **$N_{crit}$** (transition criteria) – Refer to Table 1 for recommended fluid transition values.
 ![Typical Ncrit values and their meanings](https://raw.githubusercontent.com/EygonZhang/FX-BEMS/main/figures/Ncrit%20reference%20table.png)
 
 For detailed instructions, see XFoil input/Readme_XFoil.
 
-### 2.  Performing BEM iteration to get induction factor a and a'
+### 2.  Performing BEM iteration to get the induction factor ***a*** and ***a'***
 This code takes the XFoil output (2D CL and CD for each blade element) from Module 1 as input and performs BEM iteration to compute:
 
  1. Axial induction factor (***a***)
@@ -48,7 +54,7 @@ This code takes the XFoil output (2D CL and CD for each blade element) from Modu
 The Prandtl tip loss function model yields a singularity solution at r = R (blade tip). In industrial applications, this result is often assumed to be between 0.25 and 0.5. However, this can lead to convergence issues. This section of the code independently calculates whether the engineer-specified F value produces a convergent result at the blade tip. If convergence fails, the induction factors may diverge (a → 1.000, a' → -1.000).
 **Note**: After running this section and selecting an appropriate F value, it is necessary to rerun the code from Section 2.
 
-The complete code includes Part 4 to 6 for calculating: 
+The complete code includes Modules 4 to 6 for calculating: 
  1. Relative velocity (***Urel***)
  2. Flow angle (***φ***)
  3. Updated CL and CD after blade rotational correction
