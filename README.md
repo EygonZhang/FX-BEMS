@@ -47,8 +47,8 @@ For detailed instructions, see XFoil input/Readme_XFoil.
 ### 2.  Performing BEM iteration to get the induction factor ***a*** and ***a'***
 This code takes the XFoil output (2D CL and CD for each blade element) from Module 1 as input and performs BEM iteration to compute:
 
- 1. Axial induction factor (***a***)
- 2. Tangential induction factor (***a'***)
+ 1. Axial induction factor (***a***), calculated by: $a=\left[1+\frac{4sin^2\phi}{\sigma C_a}\right]^{-1}$
+ 2. Tangential induction factor (***a'***), calculated by: $a'=\left[\frac{4sin\phi cos\phi}{\sigma C_t}-1\right]^{-1}$
 
 ### 3. Tip Loss Factor Setting and Convergence Check
 The Prandtl tip loss function model yields a singularity solution at $r = R$ (blade tip), shown as: 
