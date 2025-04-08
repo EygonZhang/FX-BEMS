@@ -61,7 +61,7 @@ For industrial applications, this result is often assumed to be between 0.25 and
 The complete code includes Modules 4 to 6 for calculating: 
  1. Relative velocity (***Urel***)
  2. Flow angle (***φ***)
- 3. Updated CL and CD after blade rotational correction
+ 3. Updated **$C_L$** and **$C_D$** after blade rotational correction
  4. Tangential force (***F_tan***) and axial force (***F_axial***) results
 
 ,which supports one-click CSV export functionality. Comparative results plotted against Hassan's study are shown below:
