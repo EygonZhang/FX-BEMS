@@ -1,5 +1,5 @@
 # Fast XFoil-embedded - Blade Element Momentum Solver (FX-BEMS) ©
-This patented code was created by researchers Yixiao Zhang and Eddie Yin Kwee Ng from Nanyang Technological University (NTU), Singapore. It describes a Python-based integrated system that utilizes an enhanced twist-blade BEM (Blade Element Momentum) algorithm coupled with XFoil to achieve refined modeling of blade forces. The portion of the code includes the following design process modules: 
+This licensed code was created by researchers Yixiao Zhang and Eddie Yin Kwee Ng from Nanyang Technological University (NTU), Singapore. It describes a Python-based integrated system that utilizes an enhanced twist-blade BEM (Blade Element Momentum) algorithm coupled with XFoil to achieve refined modeling of blade forces. The portion of the code includes the following design process modules: 
 
 **FX-BEMS_0**. Dividing the blade into elements;
 
@@ -19,7 +19,7 @@ This code contains the FX-BEMS_0-FX-BEMS_3 modules only to get the induction fac
 
 **Citation**: If used in research, kindly cite it as:
 
-[1] Zhang, Yixiao, and Ng Eddie Yin Kwee. 2025. Fast XFoil-integrated Blade Element Momentum Solver (FX-BEMS). NTUitive, the Innovation and Enterprise (I&E) Company of Nanyang Technological University, Singapore (NTU Singapore), issued April 7, 2025. https://github.com/EygonZhang/FX-BEMS.git (Patent Pending).  
+[1] Zhang, Yixiao, and Ng Eddie Yin Kwee. 2025. Fast XFoil-integrated Blade Element Momentum Solver (FX-BEMS). NTUitive, the Innovation and Enterprise (I&E) Company of Nanyang Technological University, Singapore (NTU Singapore), issued April 7, 2025. https://github.com/EygonZhang/FX-BEMS.git (Copyright Pending).  
 
 ## Quick Start
 ### 0. Blade Element Division
@@ -38,7 +38,7 @@ Since each blade element has a unique shape, the Reynolds number (***Re***) vari
 
 For detailed instructions, see XFoil input/Readme_XFoil.
 
-### 2. BEM Iteration for Rotation Correction
+### 2.  Performing BEM iteration to get induction factor a and a'
 This code takes the XFoil output (2D CL and CD for each blade element) from Module 1 as input and performs BEM iteration to compute:
 
  1. Axial induction factor (***a***)
