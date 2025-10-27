@@ -12,7 +12,7 @@ To inquire about commercial licensing or technical support, please contact:
 ## Citation
 If this code is used in academic work or publications, please cite as:
 
-Zhang, Yixiao, and Ng, Eddie Yin Kwee. 2025. Fast XFoil-integrated Blade Element Momentum Solver (FX-BEMS). Nanyang Technological University (NTU), Singapore. Licensing managed by NTUitive. Issued April 7, 2025. Available at: https://github.com/EygonZhang/FX-BEMS.git
+Vaishnavi G, Zhang, Yixiao, and Ng, Eddie Yin Kwee. 2025. Fast XFoil-integrated Blade Element Momentum Solver (FX-BEMS). Nanyang Technological University (NTU), Singapore. Licensing managed by NTUitive. Issued April 7, 2025. Available at: https://github.com/EygonZhang/FX-BEMS.git
 
 ## Quick Start
 ### 0. Blade Element Division
