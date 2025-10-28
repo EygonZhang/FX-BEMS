@@ -6,7 +6,7 @@ This plug-in code was developed by researchers **Vaishnavi Gowrishankar** at **N
 
 To inquire about commercial licensing or technical support, please contact:
 
-📧 [Your email](mailto:yixiao002@e.ntu.edu.sg) (technical support) | 📧 [linda.howe@ntu.edu.sg](mailto:linda.howe@ntu.edu.sg) (commercial licensing)
+📧 [vaishnavig2721@gmail.com](mailto:vaishnavig2721@gmail.com) (technical support) | 📧 [linda.howe@ntu.edu.sg](mailto:linda.howe@ntu.edu.sg) (commercial licensing)
 
 **Copyright © 2025 Nanyang Technological University (NTU). All rights reserved. Licensing managed by NTUitive Pte Ltd.**
 
