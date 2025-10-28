@@ -4,6 +4,8 @@
 ### Intellectual Property Notice
 This plug-in code was developed by researchers **Vaishnavi Gowrishankar** at **Nanyang Technological University (NTU), Singapore**, and is the intellectual property of NTU. Licensing and commercialization are managed by **NTUitive Pte Ltd**, a wholly owned subsidiary of NTU responsible for the protection and licensing of the university's intellectual property. It forms part of a Python-based integrated system that utilizes an enhanced twist-blade Blade Element Momentum (BEM) algorithm coupled with XFoil to enable refined aerodynamic modeling of blade forces.
 
+This v2.0 is released under the NTUitive Dual License Agreement and is made available strictly for non-commercial use, such as academic research, education, or personal learning. **Commercial use, redistribution, or derivative development for commercial purposes** is **not** permitted without prior written permission from NTU via NTUitive.
+
 To inquire about commercial licensing or technical support, please contact:
 
 📧 [vaishnavig2721@gmail.com](mailto:vaishnavig2721@gmail.com) (technical support) | 📧 [linda.howe@ntu.edu.sg](mailto:linda.howe@ntu.edu.sg) (commercial licensing)
