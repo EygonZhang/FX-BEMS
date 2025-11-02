@@ -4,7 +4,7 @@
 ### Intellectual Property Notice
 This plug-in code was developed by researcher **Vaishnavi Gowrishankar** at **Nanyang Technological University (NTU), Singapore**, and is the intellectual property of NTU. Licensing and commercialization are managed by **NTUitive Pte Ltd**, a wholly owned subsidiary of NTU responsible for the protection and licensing of the university's intellectual property. It forms part of a Python-based integrated system that utilizes an enhanced twist-blade Blade Element Momentum (BEM) algorithm coupled with XFoil to enable refined aerodynamic modeling of blade forces. v2.0 also allows an aproximate modelling of blade forces using Lifting Line Theory (LLT).
 
-This v2.0 is released under the NTUitive Dual License Agreement and is made available strictly for non-commercial use, such as academic research, education, or personal learning. **Commercial use, redistribution, or derivative development for commercial purposes** is **not** permitted without prior written permission from NTU via NTUitive.
+This v2.0 is released under the NTUitive Dual License Agreement and is made available strictly for non-commercial use, such as academic research, education, or personal learning. **Commercial use, redistribution, or derivative development for commercial purposes** is **not** permitted without prior written permission from NTU via NTUitive. The third-party libraries this project depends on (like PySide6, NumPy, etc.) are distributed under their own respective licenses (e.g., **LGPLv3**, **BSD-3-Clause**).
 
 To inquire about commercial licensing or technical support, please contact:
 
@@ -29,15 +29,34 @@ The **BEMT-LLT Solver** is a numerical tool designed for rapid computation of ae
 * Required file format   
 * Verification of Code
 
-**Running the code** 
-Ensure the .exe file and all folders located in the installation folder are downloaded and located in the same folder.
-    
+**Running the code**
+1.  **Directory:**
+    Ensure the `overall_gui.py` file and all other files and folders are downloaded and located in the same folder.
+
+2.  **Install Dependencies:**
+    Run the following command in your terminal to install all required libraries:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3.  **Run (Linux):**
+    This code must be run in a Linux environment. Once all libraries are installed, run the main script:
+    ```bash
+    python3 overall_gui.py
+    ```
+
+**Dependencies**
+This project requires the packages listed in the `requirements.txt` file, which include:
+* PySide6
+* NumPy
+* Pandas
+* Matplotlib
+* SciPy
+  
 **Computational Time**
 * C18/Section file - <1 min
 * Xfoil - <5 min
 * LLT Solver - <15-20 min
-
-  
 **General Instructions** 
 
 **Geometrical Properties Page:**
