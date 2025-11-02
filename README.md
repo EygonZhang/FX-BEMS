@@ -60,7 +60,7 @@ Ensure the .exe file and all folders located in the installation folder are down
 | *Linear Twist Distribution* | Twist defined as `a - b*r` (r in m, a in degrees, b in deg/m), or upload custom data if ***no*** is chosen |
 | *Linear Chord Distribution* | Chord defined as `a - b*r` (r in m, a in meters, b nondimensional), or upload custom data if ***no*** is chosen |
 | Airfoil Data Options (Choose one): |  |
-| *XFoil Coupling* | Automatically extracts airfoil data from XFoil; recommended when Re/Mach varies significantly along the blade.  |
+| *XFoil Coupling* | Automatically extracts airfoil data from XFoil; recommended when Re/Mach varies significantly along the blade. |
 | *C18 Table* | Upload CL and CD tables in Excel format (details below). |
 | *0.75R Airfoil Properties* | Uses a single airfoil dataset for the entire blade; best for near-uniform airfoil behavior along the blade. |
 | *LLT Coupling (Optional)* | Runs LLT alongside BEMT. Requires an **airfoil section file**. Provides a baseline verification for BEMT. Is not as accurate, provides a reference. |
@@ -70,7 +70,8 @@ Ensure the .exe file and all folders located in the installation folder are down
 * Click **Run** to start the solver.  
 * Depending on selected options:  
   * You will be prompted to enter linear parameters `a` and `b` for chord and/or pitch distribution.  
-  * If using XFoil, specify start and end angle of attack (AOA). Start by setting starting AOA to \-ve values and increase to 0 if convergence issues in Xfoil occur. Ending AOA should be less than or equal to the maximum pitch angle of the blade.   
+  * If using XFoil, specify start and end angle of attack (AOA). Start by setting starting AOA to \-ve values and increase to 0 if convergence issues in Xfoil occur. Ending AOA should be less than or equal to the maximum pitch angle of the blade.
+  * The path of xfoil.exe must be pasted when prompted 
 * Parameters can be edited before or after running via the ***Back*** button and rerun.
 
 **Error Handling:**
@@ -89,7 +90,7 @@ Ensure the .exe file and all folders located in the installation folder are down
 **Xfoil Non-NACA Airfoil File:**
 
 * Must be a `.txt` file containing airfoil coordinates compatible with XFoil.  
-* Filename must exactly match the name entered in the GUI (.txt need not be entered)
+* Filename must exactly match the name entered in the GUI (.txt must be entered)
 
 **Chord Distribution File:**
 
